@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2798A02F8B333E5AB7AC5F8E /* Pods_MovieList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65A2CC70E0207884CAC495A /* Pods_MovieList.framework */; };
+		321B16F2272368CA0059DDEE /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B16F1272368CA0059DDEE /* URL.swift */; };
+		321B16F5272369A90059DDEE /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B16F4272369A90059DDEE /* MovieListTableViewCell.swift */; };
+		321B16F727236E650059DDEE /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B16F627236E650059DDEE /* MovieDetailViewController.swift */; };
 		32D24CD42723444E00500774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D24CD32723444E00500774 /* AppDelegate.swift */; };
 		32D24CD62723444E00500774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D24CD52723444E00500774 /* SceneDelegate.swift */; };
 		32D24CD82723444E00500774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D24CD72723444E00500774 /* ViewController.swift */; };
@@ -45,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		26F211175530013AF06EFC80 /* Pods-MovieList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieList.release.xcconfig"; path = "Target Support Files/Pods-MovieList/Pods-MovieList.release.xcconfig"; sourceTree = "<group>"; };
+		321B16F1272368CA0059DDEE /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		321B16F4272369A90059DDEE /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
+		321B16F627236E650059DDEE /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		32D24CD02723444E00500774 /* MovieList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D24CD32723444E00500774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32D24CD52723444E00500774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321B16F0272368BE0059DDEE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				321B16F1272368CA0059DDEE /* URL.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		32D24CC72723444E00500774 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +140,7 @@
 		32D24CD22723444E00500774 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				321B16F0272368BE0059DDEE /* Extension */,
 				32D24D0D272349C400500774 /* Model */,
 				32D24D06272346CC00500774 /* Networking */,
 				32D24CD32723444E00500774 /* AppDelegate.swift */,
@@ -137,6 +152,8 @@
 				32D24CE42723444F00500774 /* Info.plist */,
 				32D24CDC2723444E00500774 /* MovieList.xcdatamodeld */,
 				32D24D0B2723478900500774 /* Constants.swift */,
+				321B16F4272369A90059DDEE /* MovieListTableViewCell.swift */,
+				321B16F627236E650059DDEE /* MovieDetailViewController.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -439,11 +456,14 @@
 			files = (
 				32D24CD82723444E00500774 /* ViewController.swift in Sources */,
 				32D24D082723473A00500774 /* APIRouter.swift in Sources */,
+				321B16F2272368CA0059DDEE /* URL.swift in Sources */,
 				32D24CD42723444E00500774 /* AppDelegate.swift in Sources */,
 				32D24CDE2723444E00500774 /* MovieList.xcdatamodeld in Sources */,
 				32D24D0C2723478900500774 /* Constants.swift in Sources */,
 				32D24CD62723444E00500774 /* SceneDelegate.swift in Sources */,
 				32D24D0F272349CF00500774 /* Movie.swift in Sources */,
+				321B16F5272369A90059DDEE /* MovieListTableViewCell.swift in Sources */,
+				321B16F727236E650059DDEE /* MovieDetailViewController.swift in Sources */,
 				32D24D0A2723475600500774 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

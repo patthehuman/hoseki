@@ -24,7 +24,7 @@ enum APIRouter: URLRequestConvertible {
     private var path: String {
         switch self {
         case .trending(let meditype, let timeWindow):
-            return "/articles/\(meditype)/\(timeWindow)"
+            return "/trending/\(meditype)/\(timeWindow)"
         }
     }
     
@@ -38,7 +38,11 @@ enum APIRouter: URLRequestConvertible {
     
     // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
-        let url = try Constants.Production.baseURL.asURL()
+        var url = try Constants.Production.baseURL.asURL()
+        
+        // It looks like the movie api requires api_key to be appended to every url 
+        let queryItems = [URLQueryItem(name: "api_key", value: Constants.Production.apiKey)]
+        url = url.appending(queryItems)!
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
@@ -63,3 +67,5 @@ enum APIRouter: URLRequestConvertible {
         return urlRequest
     }
 }
+
+

@@ -17,7 +17,7 @@ class APIClient {
         }
     }
     
-    static func getArticles(mediaType: String, timeWindow: String, completion: @escaping (Result<[Movie], AFError>)->Void) {
+    static func getTrending(mediaType: String, timeWindow: String, completion: @escaping (Result<Page, AFError>)->Void) {
         let decoder = JSONDecoder()
         performRequest(route: APIRouter.trending(mediaType: mediaType, timeWindow: timeWindow), decoder: decoder, completion: completion)
     }
