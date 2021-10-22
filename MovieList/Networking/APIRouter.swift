@@ -10,6 +10,7 @@ import Alamofire
 
 enum APIRouter: URLRequestConvertible {
     
+    case movie(id: Int)
     case trending(mediaType: String, timeWindow: String)
     
     // MARK: - HTTPMethod
@@ -17,7 +18,10 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .trending:
             return .get
+        case .movie:
+            return .get
         }
+    
     }
     
     // MARK: - Path
@@ -25,13 +29,15 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .trending(let meditype, let timeWindow):
             return "/trending/\(meditype)/\(timeWindow)"
+        case .movie(let id):
+            return "/movie/\(id)"
         }
     }
     
     // MARK: - Parameters
     private var parameters: Parameters? {
         switch self {
-        case .trending:
+        case .trending, .movie:
             return nil
         }
     }
@@ -40,7 +46,7 @@ enum APIRouter: URLRequestConvertible {
     func asURLRequest() throws -> URLRequest {
         var url = try Constants.Production.baseURL.asURL()
         
-        // It looks like the movie api requires api_key to be appended to every url 
+        // It looks like the movie api requires api_key to be appended to every url
         let queryItems = [URLQueryItem(name: "api_key", value: Constants.Production.apiKey)]
         url = url.appending(queryItems)!
         

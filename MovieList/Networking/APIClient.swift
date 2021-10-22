@@ -22,4 +22,11 @@ class APIClient {
         performRequest(route: APIRouter.trending(mediaType: mediaType, timeWindow: timeWindow), decoder: decoder, completion: completion)
     }
     
+    static func getMovie(id: Int, completion: @escaping (Result<Movie, AFError>)->Void) {
+        let decoder = JSONDecoder()
+        let request = APIRouter.movie(id: id)
+        
+        performRequest(route: request, decoder: decoder, completion: completion)
+    }
+    
 }

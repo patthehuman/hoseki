@@ -11,6 +11,8 @@
 		321B16F2272368CA0059DDEE /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B16F1272368CA0059DDEE /* URL.swift */; };
 		321B16F5272369A90059DDEE /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B16F4272369A90059DDEE /* MovieListTableViewCell.swift */; };
 		321B16F727236E650059DDEE /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B16F627236E650059DDEE /* MovieDetailViewController.swift */; };
+		321B16F9272373A40059DDEE /* MovieDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B16F8272373A40059DDEE /* MovieDetailTableViewCell.swift */; };
+		321B16FC272375C40059DDEE /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B16FB272375C40059DDEE /* Movies.swift */; };
 		32D24CD42723444E00500774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D24CD32723444E00500774 /* AppDelegate.swift */; };
 		32D24CD62723444E00500774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D24CD52723444E00500774 /* SceneDelegate.swift */; };
 		32D24CD82723444E00500774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D24CD72723444E00500774 /* ViewController.swift */; };
@@ -51,6 +53,8 @@
 		321B16F1272368CA0059DDEE /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		321B16F4272369A90059DDEE /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		321B16F627236E650059DDEE /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		321B16F8272373A40059DDEE /* MovieDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewCell.swift; sourceTree = "<group>"; };
+		321B16FB272375C40059DDEE /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		32D24CD02723444E00500774 /* MovieList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D24CD32723444E00500774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32D24CD52723444E00500774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		321B16FA272375B70059DDEE /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				321B16FB272375C40059DDEE /* Movies.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		32D24CC72723444E00500774 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +152,7 @@
 		32D24CD22723444E00500774 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				321B16FA272375B70059DDEE /* Class */,
 				321B16F0272368BE0059DDEE /* Extension */,
 				32D24D0D272349C400500774 /* Model */,
 				32D24D06272346CC00500774 /* Networking */,
@@ -154,6 +167,7 @@
 				32D24D0B2723478900500774 /* Constants.swift */,
 				321B16F4272369A90059DDEE /* MovieListTableViewCell.swift */,
 				321B16F627236E650059DDEE /* MovieDetailViewController.swift */,
+				321B16F8272373A40059DDEE /* MovieDetailTableViewCell.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -457,12 +471,14 @@
 				32D24CD82723444E00500774 /* ViewController.swift in Sources */,
 				32D24D082723473A00500774 /* APIRouter.swift in Sources */,
 				321B16F2272368CA0059DDEE /* URL.swift in Sources */,
+				321B16F9272373A40059DDEE /* MovieDetailTableViewCell.swift in Sources */,
 				32D24CD42723444E00500774 /* AppDelegate.swift in Sources */,
 				32D24CDE2723444E00500774 /* MovieList.xcdatamodeld in Sources */,
 				32D24D0C2723478900500774 /* Constants.swift in Sources */,
 				32D24CD62723444E00500774 /* SceneDelegate.swift in Sources */,
 				32D24D0F272349CF00500774 /* Movie.swift in Sources */,
 				321B16F5272369A90059DDEE /* MovieListTableViewCell.swift in Sources */,
+				321B16FC272375C40059DDEE /* Movies.swift in Sources */,
 				321B16F727236E650059DDEE /* MovieDetailViewController.swift in Sources */,
 				32D24D0A2723475600500774 /* APIClient.swift in Sources */,
 			);

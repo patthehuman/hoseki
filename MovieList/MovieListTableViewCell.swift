@@ -9,7 +9,8 @@ import UIKit
 import Nuke
 
 class MovieListTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var likesButton: UIButton!
     @IBOutlet weak var movieImage: UIImageView!
     
     public var movie: Movie! {
@@ -31,15 +32,27 @@ class MovieListTableViewCell: UITableViewCell {
         
         Nuke.loadImage(with: path, options: options, into: movieImage)
         
+        determineLike()
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
+    private func determineLike() {
+        // check if we like this movie
+        var imageState = UIImage(systemName: "heart")
+        if Movies.likesMovie(movie: movie) {
+            imageState = UIImage(systemName: "heart.fill")
+        }
+        
+        likesButton.setImage(imageState, for: .normal)
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    
+    @IBAction func selectedHeart(_ sender: Any) {
+        
+        let currentLike = Movies.likesMovie(movie: movie)
+        
+        Movies.setLikeStatus(likesMovie: !currentLike, movie: movie)
+        
+        determineLike()
     }
-
+    
 }
