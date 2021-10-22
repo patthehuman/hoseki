@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol MovieDetailDelegate: AnyObject {
+    func didUpdateMovie(movie: Movie)
+}
+
 class MovieDetailViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    
+    var delegate: MovieDetailDelegate?
     
     public var movieId: Int!
     private var movie: Movie?
@@ -70,11 +76,19 @@ extension MovieDetailViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath) as! MovieDetailTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieDetailTableViewCell", for: indexPath) as! MovieDetailTableViewCell
         
+        cell.delegate = self
         cell.movie = m
         
         return cell
     }
     
+}
+
+
+extension MovieDetailViewController: MovieDetailCellDelegate {
+    func didUpdateMovie(movie: Movie) {
+        delegate?.didUpdateMovie(movie: movie)
+    }
 }

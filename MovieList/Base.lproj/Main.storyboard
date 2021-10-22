@@ -139,7 +139,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                                                     <connections>
-                                                        <action selector="selectedHeart:" destination="9nG-rL-oIB" eventType="touchUpInside" id="grJ-D5-eDV"/>
+                                                        <action selector="selectedHeart:" destination="4EH-I0-h9f" eventType="touchUpInside" id="FrU-f5-GFx"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -161,7 +161,7 @@
                                         <connections>
                                             <outlet property="movieDescription" destination="Ofh-Ix-LMY" id="FCS-5a-Q3F"/>
                                             <outlet property="movieImage" destination="GCw-9n-wwe" id="6t5-7u-Mfw"/>
-                                            <outlet property="movieLikeButton" destination="N9F-ti-NL5" id="7Fc-ZK-hE1"/>
+                                            <outlet property="movieLikeButton" destination="N9F-ti-NL5" id="u08-Px-EDq"/>
                                             <outlet property="movieTitle" destination="0Qc-M3-qs0" id="vsZ-8M-1wl"/>
                                         </connections>
                                     </tableViewCell>

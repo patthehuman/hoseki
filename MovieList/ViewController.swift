@@ -67,6 +67,7 @@ extension ViewController: UITableViewDelegate {
         let detailView = UIStoryboard(name: "Main", bundle: nil)
         let detailController = detailView.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
         
+        detailController.delegate = self
         detailController.movieId = dataSource[indexPath.row].id
         
         self.navigationController?.pushViewController(detailController, animated: true)
@@ -97,3 +98,9 @@ extension ViewController: UITableViewDataSource {
     
 }
 
+extension ViewController: MovieDetailDelegate {
+    func didUpdateMovie(movie: Movie) {
+        
+        self.tableView.reloadData()
+    }
+}
